@@ -1,26 +1,40 @@
 .home-container {
-  height: 300vh; /* Increase the height to enable scrolling */
+  height: 320vh; /* Increase the height to enable scrolling */
   overflow-y: auto; /* Enable vertical scrolling */
 }
 
 .section1-left {
-  height: 100vh;
+  height: 120vh;
   width: 50%;
   float: left;
   display: flex;
   justify-content: center;
-  align-items: center;
   background-color: lightblue;
 }
 
 .section1-right {
-  height: 100vh;
+  height: 120vh;
   width: 50%;
   display: flex;
+  flex-direction: column;
   float: left;
   justify-content: center;
-  align-items: center;
-  background-color: rgb(173, 230, 196);
+  align-items: flex-start;
+  background-color: pink;
+  font-family: 'Cormorant Garamond', serif; /* Use Cormorant Garamond font */
+}
+
+.section1-right h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  position: absolute;
+  color: rgba(234, 234, 134, 0.989);
+}
+
+.section1-right p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
 }
 
 .section2 {
@@ -28,7 +42,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: pink;
+  background-color: rgb(129, 52, 52);
   clear: both; /* Clear the floats */
   margin-top: 50px; /* Add some spacing between sections */
 }

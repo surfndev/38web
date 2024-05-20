@@ -14,16 +14,23 @@ const Section1Left: React.FC = () => {
 };
 
 const Section1Right: React.FC = () => {
-  return (
-    <section className="section1-right">
-      <Parallax speed={-10}>
-        <div className="buttons">
-          <h1>38 Beauty</h1>
-        </div>
-      </Parallax>
-    </section>
-  );
-};
+    return (
+      <section className="section1-right">
+        <p className="intro-text">
+          <b>清理毛孔，邁向完美</b>
+          <br />
+          以全新The Deep Purifying Mask 極緻深層煥膚面膜 揭開肌膚最淨透的潛能，這乳霜狀的清涼修護 能深層排毒和維持平衡，締造煥然一新的零毛孔嫩肌。
+          <br />
+          <br />
+        </p>
+        <Parallax speed={-10}>
+          <div className="buttons">
+            <h1 className="product-name">38 BEAUTY</h1>
+          </div>
+        </Parallax>
+      </section>
+    );
+  };
 
 const Section2: React.FC = () => {
   return (
