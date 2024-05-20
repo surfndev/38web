@@ -3,12 +3,24 @@
   overflow-y: auto; /* Enable vertical scrolling */
 }
 
-.section1 {
+.section1-left {
   height: 100vh;
+  width: 50%;
+  float: left;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: lightblue;
+}
+
+.section1-right {
+  height: 100vh;
+  width: 50%;
+  display: flex;
+  float: left;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(173, 230, 196);
 }
 
 .section2 {
@@ -17,6 +29,8 @@
   justify-content: center;
   align-items: center;
   background-color: pink;
+  clear: both; /* Clear the floats */
+  margin-top: 50px; /* Add some spacing between sections */
 }
 
 .section3 {
@@ -25,6 +39,7 @@
   justify-content: center;
   align-items: center;
   background-color: lightyellow;
+  clear: both; /* Clear the floats */
 }
 
 .buttons {
