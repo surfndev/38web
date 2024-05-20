@@ -1,0 +1,38 @@
+.home-container {
+  height: 300vh; /* Increase the height to enable scrolling */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.section1 {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue;
+}
+
+.section2 {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: pink;
+}
+
+.section3 {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightyellow;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+button {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+}
