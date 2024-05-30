@@ -2,13 +2,20 @@ import React from 'react';
 import { createFileRoute } from '@tanstack/react-router';
 import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
 import './home.css'; // Import the CSS file
+import flyingVideo from '../assets/images/flybg.mp4';
+import icon38 from '../assets/images/38logo.png';
 
 const Section1Left: React.FC = () => {
   return (
     <section className="section1-left">
-      <Parallax speed={-10}>
-        {/* Left side content */}
-      </Parallax>
+      <div className="video-wrapper">
+        <video autoPlay loop muted className="flying-video">
+          <source src={flyingVideo} type="video/mp4" />
+        </video>
+        <div className="icon-overlay">
+          <img src={icon38} alt="38 logo" className="icon-image" />
+        </div>
+      </div>
     </section>
   );
 };
@@ -17,16 +24,20 @@ const Section1Right: React.FC = () => {
     return (
       <section className="section1-right">
         <p className="intro-text">
-          <b>清理毛孔，邁向完美</b>
+          <b>&nbsp;&nbsp;&nbsp;<span className="large-text">源自傳統，融入現代</span></b>
           <br />
-          以全新The Deep Purifying Mask 極緻深層煥膚面膜 揭開肌膚最淨透的潛能，這乳霜狀的清涼修護 能深層排毒和維持平衡，締造煥然一新的零毛孔嫩肌。
+          &nbsp;&nbsp;&nbsp;&nbsp;漢方草本養護智慧
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;為您開啟髮質煥然一新之旅 
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;為您的髮質注入全新活力。
           <br />
           <br />
-        </p>
+          </p>
         <Parallax speed={-10}>
           <div className="buttons">
-            <h1 className="product-name">38 BEAUTY</h1>
-          </div>
+            <h1 className="product-name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;38BEAUTY</h1>
+          </div>  
         </Parallax>
       </section>
     );
