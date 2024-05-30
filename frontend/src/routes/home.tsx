@@ -26,9 +26,9 @@ const Section1Right: React.FC = () => {
         <p className="intro-text">
           <b>&nbsp;&nbsp;&nbsp;<span className="large-text">源自傳統，融入現代</span></b>
           <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;漢方草本養護智慧
+          &nbsp;&nbsp;&nbsp;&nbsp;漢方草本養護智慧，
           <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;為您開啟髮質煥然一新之旅 
+          &nbsp;&nbsp;&nbsp;&nbsp;為您開啟髮質煥然一新之旅，
           <br />
           &nbsp;&nbsp;&nbsp;&nbsp;為您的髮質注入全新活力。
           <br />
@@ -36,7 +36,7 @@ const Section1Right: React.FC = () => {
           </p>
         <Parallax speed={-10}>
           <div className="buttons">
-            <h1 className="product-name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;38BEAUTY</h1>
+            <h1 className="product-name">&nbsp;&nbsp;38BEAUTY</h1>
           </div>  
         </Parallax>
       </section>
