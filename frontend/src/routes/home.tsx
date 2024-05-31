@@ -5,6 +5,14 @@ import './home.css'; // Import the CSS file
 import flyingVideo from '../assets/images/flybg.mp4';
 import icon38 from '../assets/images/38logo.png';
 import ProductPage from './products';
+import icon from '../assets/images/down.png';
+import { useState } from 'react';
+import mapImage from '../assets/images/fakemap.png';
+
+
+
+
+
 
 const Section1Left: React.FC = () => {
   return (
@@ -44,17 +52,51 @@ const Section1Right: React.FC = () => {
     );
   };
 
-const Section2: React.FC = () => {
-  return (
-    <section className="section2">
-      <Parallax speed={5}>
-        <h2>Section 2</h2>
-        <button>Hair Treatment Center</button>
-        <p>This is the content for the second section.</p>
-      </Parallax>
-    </section>
-  );
-};
+  const Sectionmid: React.FC = () => {
+    return (
+      <div className='sectionmid'>&nbsp;</div>
+    );
+  };
+
+  const Section2: React.FC = () => {
+    const [buttonClicked, setButtonClicked] = useState(false);
+  
+    const handleClick = () => {
+      setButtonClicked(true);
+    };
+  
+    const handleBack = () => {
+      setButtonClicked(false);
+    };
+  
+    return (
+      <section className="section2">
+        <div className="content">
+          {!buttonClicked && (
+            <button className="custom-button" onClick={handleClick}>
+              <span className="button-text">探索我們的頭髮護理中心</span>
+              <img src={icon} alt="Button Icon" className="button-icon" />
+            </button>
+          )}
+  
+          {buttonClicked && (
+            <div className="map-overlay">
+              <img src={mapImage} alt="Map" className="map-image" />
+              <button className="back-button" onClick={handleBack}>
+                Back
+              </button>
+            </div>
+          )}
+        </div>
+      </section>
+    );
+  };
+
+  const Sectionlater: React.FC = () => {
+    return (
+      <div className='sectionlater'>&nbsp;</div>
+    );
+  };
 
 const Section3: React.FC = () => {
   return (
@@ -66,14 +108,18 @@ const Section3: React.FC = () => {
 
 const Home: React.FC = () => {
   return (
+    
     <ParallaxProvider>
       <div className="home-container">
         <Section1Left />
         <Section1Right />
+        <Sectionmid/>
         <Section2 />
+        <Sectionlater/>
         <Section3 />
       </div>
     </ParallaxProvider>
+    
   );
 };
 

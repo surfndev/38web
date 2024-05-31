@@ -4,6 +4,7 @@
   gap: 3rem
 }
 
+
 .section1-left {
   height: 120vh;
   width: 50%;
@@ -11,6 +12,24 @@
   display: flex;
   justify-content: center;
   background-color: white;
+}
+
+@media (min-width: 768px) {
+  /* For screens larger than 768px */
+  .section1-left {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 767px) {
+  /* For screens smaller than or equal to 767px */
+  .section1-left {
+    width: 100%;
+    height: 10%;
+    
+  }
 }
 
 .video-wrapper {
@@ -52,39 +71,136 @@
   justify-content: center;
   align-items: flex-start;
   background-color: white;
-  font-family: 'Cormorant Garamond', serif; /* Use Cormorant Garamond font */
+  font-family: 'Cormorant Garamond', serif;
 }
 
 .section1-right h1 {
   font-size: 7rem;
   font-weight: 700;
   position: absolute;
-  color: black(234, 234, 134, 0.989);
+  color: black;
 }
 
 .section1-right p {
   font-size: 1.5rem;
   line-height: 1.5;
-  margin-bottom: 2rem;
+  margin-bottom: 20rem;
 }
 
+@media (max-width: 767px) {
+  /* For screens smaller than or equal to 767px */
+  .section1-right {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .section1-right h1 {
+    position: static;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .section1-right p {
+    margin-bottom: 4rem;
+  }
+}
+
+.sectionmid{
+  padding: 20px
+  ;
+}
 .section2 {
-  height: 100vh;
+  font-family: 'Cormorant Garamond', serif;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(129, 52, 52);
+  background-image: url(../assets/images/nuluxfloor.webp);
+  background-size: cover;
+  background-position: center;
   clear: both; /* Clear the floats */
+  padding-top: 200px;
   margin-top: 50px; /* Add some spacing between sections */
+  position: relative;
+
+
+
+}
+
+.section2 button{
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  position: relative;
+  background-color: transparent;
+  color: #fff; /* Adjust the button's text color */
+}
+
+
+.button-text {
+  font-size: 24px; /* Adjust the font size as needed */
+}
+
+.button-icon {
+  width: 20px; /* Adjust the width of the icon */
+  height: 20px; /* Adjust the height of the icon */
+  margin-left: 120px; /* Adjust the margin as needed */
+  display: block; /* Ensures the icon is treated as a block element */
+  margin-right: auto; /* Centers the icon horizontally within the button */
+  
+}
+
+.button-icon {
+  filter: invert(1); /* Change the color of the icon to white */
+}
+
+.section2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+}
+
+.map-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.map-image {
+  width: 400px;
+  height: 400px;
+  margin-bottom: 20px;
+}
+
+.logo-image {
+  width: 200px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.back-button {
+  padding: 10px 20px;
+  background-color: #f00;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }
 
 .section3 {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  clear: both; /* Clear the floats */
+ 
 }
 
 .buttons {
