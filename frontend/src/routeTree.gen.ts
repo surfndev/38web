@@ -14,7 +14,7 @@ import { Route as rootRoute } from './routes/__root'
 import { Route as ServiceImport } from './routes/service'
 import { Route as ResetPasswordImport } from './routes/reset-password'
 import { Route as RecoverPasswordImport } from './routes/recover-password'
-import { Route as ProductImport } from './routes/product'
+import { Route as ProductsImport } from './routes/products'
 import { Route as LoginImport } from './routes/login'
 import { Route as HomeImport } from './routes/home'
 import { Route as LayoutImport } from './routes/_layout'
@@ -40,8 +40,8 @@ const RecoverPasswordRoute = RecoverPasswordImport.update({
   getParentRoute: () => rootRoute,
 } as any)
 
-const ProductRoute = ProductImport.update({
-  path: '/product',
+const ProductsRoute = ProductsImport.update({
+  path: '/products',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -96,8 +96,8 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LoginImport
       parentRoute: typeof rootRoute
     }
-    '/product': {
-      preLoaderRoute: typeof ProductImport
+    '/products': {
+      preLoaderRoute: typeof ProductsImport
       parentRoute: typeof rootRoute
     }
     '/recover-password': {
@@ -142,7 +142,7 @@ export const routeTree = rootRoute.addChildren([
   ]),
   HomeRoute,
   LoginRoute,
-  ProductRoute,
+  ProductsRoute,
   RecoverPasswordRoute,
   ResetPasswordRoute,
   ServiceRoute,

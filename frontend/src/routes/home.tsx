@@ -4,6 +4,7 @@ import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
 import './home.css'; // Import the CSS file
 import flyingVideo from '../assets/images/flybg.mp4';
 import icon38 from '../assets/images/38logo.png';
+import ProductPage from './products';
 
 const Section1Left: React.FC = () => {
   return (
@@ -58,11 +59,7 @@ const Section2: React.FC = () => {
 const Section3: React.FC = () => {
   return (
     <section className="section3">
-      <Parallax speed={-20}>
-        <h2>Section 3</h2>
-        <button>Hair Products</button>
-        <p>This is the content for the third section.</p>
-      </Parallax>
+      <ProductPage />
     </section>
   );
 };
