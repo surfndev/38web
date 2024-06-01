@@ -8,13 +8,13 @@ import ProductPage from './products';
 import icon from '../assets/images/down.png';
 import { useState } from 'react';
 import mapImage from '../assets/images/real_location.png';
-import '@fortawesome/fontawesome-free/css/all.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faFacebookF } from '@fortawesome/free-brands-svg-icons';
+
 import  flower1 from '../assets/images/flower1.svg';
 import  flower2 from '../assets/images/flower2.svg';
 import  flower3 from '../assets/images/flower3.svg';
 import  flower4 from '../assets/images/flower4.svg';
+
+
 
 
 
@@ -38,15 +38,7 @@ const Section1Left: React.FC = () => {
 const Section1Right: React.FC = () => {
     return (
       <section className="section1-right">
-      <div className="icon-container">
-      <a href="https://www.instagram.com/qxqs_hair_treatment_center?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" className="icon-link instagram">
-        <FontAwesomeIcon icon={faInstagram} />
-      </a>
-
-      <a href="https://www.facebook.com/profile.php?id=61557933878671&mibextid=LQQJ4d" className="icon-link facebook">
-        <FontAwesomeIcon icon={faFacebookF} />
-      </a>
-    </div>
+     
 
         <p className="intro-text">
           <b>&nbsp;&nbsp;&nbsp;<span className="large-text">源自傳統，融入現代</span></b>
