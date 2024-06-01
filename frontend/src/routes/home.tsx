@@ -89,11 +89,7 @@ const Section1Right: React.FC = () => {
     );
   };
 
-  const Sectionmid: React.FC = () => {
-    return (
-      <div className='sectionmid'>&nbsp;</div>
-    );
-  };
+
 
   const Section2: React.FC = () => {
     const [buttonClicked, setButtonClicked] = useState(false);
