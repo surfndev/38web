@@ -1,12 +1,13 @@
 .home-container {
-  height: 320vh; /* Increase the height to enable scrolling */
+  height: 370vh; /* Increase the height to enable scrolling */
   overflow-y: auto; /* Enable vertical scrolling */
-  gap: 3rem
+  gap: 3rem;
+  font-family: 'Cormorant Garamond', serif;
 }
 
 
 .section1-left {
-  height: 120vh;
+  height: 100vh;
   width: 50%;
   float: left;
   display: flex;
@@ -14,7 +15,7 @@
   background-color: white;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   /* For screens larger than 768px */
   .section1-left {
     width: 50%;
@@ -63,7 +64,7 @@
 }
 
 .section1-right {
-  height: 120vh;
+  height: 100vh;
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -72,6 +73,7 @@
   align-items: flex-start;
   background-color: white;
   font-family: 'Cormorant Garamond', serif;
+  position: relative;
 }
 
 .section1-right h1 {
@@ -87,10 +89,31 @@
   margin-bottom: 20rem;
 }
 
-@media (max-width: 767px) {
+.icon-container {
+  position: fixed;
+  top: 10px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 9999;
+}
+
+.icon-link {
+  padding: 7px;
+  font-size: 24px;
+  color: black;
+  text-decoration: none;
+  margin-bottom: 10px;
+  box-sizing: content-box;
+}
+
+
+@media (max-width: 1000px) {
   /* For screens smaller than or equal to 767px */
   .section1-right {
     width: 100%;
+    height: 600px;
     align-items: center;
     text-align: center;
   }
@@ -101,8 +124,140 @@
     margin-bottom: 2rem;
   }
 
+  @media (max-width: 768px) {
+    .section1-right h1 {
+      font-size: 2.5rem; /* Adjust the font size for smaller screens */
+    }
+  }
+
   .section1-right p {
     margin-bottom: 4rem;
+  }
+}
+
+.brand-intro {
+  max-width: 1200px; /* Adjust the value as needed */
+  margin: 20px auto; /* Add margin to create space and center the container horizontally */
+  padding: 20px; /* Add padding to create separation from other elements */
+  clear: both; /* Clear any floated elements above */
+  height: 80vh;
+  display: flex; /* Add flex display to enable flexbox layout */
+  position: relative;
+}
+
+.text-container {
+  flex: 1;
+  display: flex; /* Add flex display to align items horizontally */
+  justify-content: center; /* Center the items horizontally */
+  margin-right: 400px;
+
+}
+.brand-intro h2 {
+  text-align: center;
+  margin: 0 auto; /* Center the h2 horizontally */
+  margin-bottom: 30px;
+  font-weight: bold; /* Make the h2 tag bold */
+  font-size: 24px; 
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* Adjust alignment to start from the left side */
+  justify-content: center;
+}
+
+
+.left-side p {
+  max-width: 400px; /* Adjust the value as needed */
+  padding: 10px;
+
+}
+.image-container {
+  width: 30%;
+  text-align: center;
+}
+
+.flower-image {
+  position: absolute;
+  right: 20px; /* Adjust the value as needed */
+  bottom: 200px; /* Adjust the value as needed */
+  width: 100px; /* Adjust the width as needed */
+  height: 100px; /* Adjust the height as needed */
+  width: 200px; /* Adjust the width as needed */
+  height: 200px; /* Adjust the height as needed */
+}
+
+.flower-image2 {
+  position: absolute;
+  right: 300px; /* Adjust the value as needed */
+  bottom: 300px; /* Adjust the value as needed */
+  width: 100px; /* Adjust the width as needed */
+  height: 100px; /* Adjust the height as needed */
+  width: 200px; /* Adjust the width as needed */
+  height: 200px; /* Adjust the height as needed */
+}
+
+.flower-image3 {
+  position: absolute;
+  right: 300px; /* Adjust the value as needed */
+  bottom: 100px; /* Adjust the value as needed */
+  width: 100px; /* Adjust the width as needed */
+  height: 100px; /* Adjust the height as needed */
+  width: 200px; /* Adjust the width as needed */
+  height: 200px; /* Adjust the height as needed */
+}
+
+.flower-image4 {
+  position: absolute;
+  right: 20px; /* Adjust the value as needed */
+  bottom: 10px; /* Adjust the value as needed */
+  width: 100px; /* Adjust the width as needed */
+  height: 100px; /* Adjust the height as needed */
+  width: 200px; /* Adjust the width as needed */
+  height: 200px; /* Adjust the height as needed */
+}
+
+
+@media (max-width: 1000px) {
+  .brand-intro {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .text-container {
+    margin-right: 0;
+  }
+
+  .left-side p {
+    max-width: 100%;
+  }
+
+  .image-container {
+    width: 100%;
+  }
+
+  /* Adjust the positioning of the flower images */
+  .flower-image {
+    position: static;
+    margin: 10px auto;
+  }
+
+  .flower-image2,
+  .flower-image3,
+  .flower-image4{
+    display: none;
+  }
+  
+  /* Switch the order of image-container and left-side */
+  .brand-intro .image-container {
+    order: -1;
+    margin-bottom: 20px;
+  }
+  
+  .brand-intro .left-side {
+    order: 1;
   }
 }
 
@@ -112,7 +267,7 @@
 }
 .section2 {
   font-family: 'Cormorant Garamond', serif;
-  height: 80vh;
+  height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,9 +1,10 @@
 import React from 'react';
-import { Box, Flex, Heading, Image, Text } from '@chakra-ui/react';
+import { Box, Divider, Flex, Heading, Image, Text } from '@chakra-ui/react';
 import { createFileRoute } from '@tanstack/react-router';
 import shampoo from '../assets/images/shampoo.png';
 import condit from '../assets/images/conditoner.png';
 import essen from '../assets/images/essential.png';
+import cert from '../assets/images/cert.png';
 
 interface Product {
   id: number;
@@ -42,7 +43,7 @@ const ProductPage: React.FC = () => {
       p={8}
       gap={8}
     >
-      <Heading>產品</Heading>
+      <Heading style={{ fontFamily: "'Cormorant Garamond', serif" }}>產品</Heading>
       <Flex flexWrap="wrap" justifyContent="center" gap={8}>
         {products.map((product) => (
           <Box
@@ -55,15 +56,24 @@ const ProductPage: React.FC = () => {
           >
             <Image src={product.image} alt={product.name} />
             <Box p={6}>
-              <Heading size="md" mb={2}>{product.name}</Heading>
-              <Text>{product.description}</Text>
+              <Heading size="md" mb={2} style={{ fontFamily: "'Cormorant Garamond', serif" }}>{product.name}</Heading>
+              <Text style={{ fontFamily: "'Cormorant Garamond', serif" }}>{product.description}</Text>
             </Box>
           </Box>
         ))}
       </Flex>
+
+      <Divider my={8} />
+
+      <Flex justifyContent="center" gap={8}>
+        <Image src={cert} alt="cert " maxH="80px" />
+      
+      </Flex>
+      
     </Flex>
   );
 };
+
 
 export const Route = createFileRoute('/products')({
   component: ProductPage,
